@@ -2,23 +2,4 @@ local Games = {
  { ID = 1844663089, Script = "Test" }
 }
 
-local StatusIndicator = { WasFound = false }
-
-
-
-for i = 1,#Games do
-  if game.PlaceId == Games[i].ID then
-    StatusIndicator.WasFound = true
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/bonefraktur/Bone_Hub/main/Game_Scripts/" .. Games[i].Script))()
-  end
-end
-
-warn(StatusIndicator.WasFound)
-
-if not StatusIndicator.WasFound then
-  game:GetService("StarterGui"):SetCore("SendNotification",{
-    Title = "BONE HUB",
-    Text = "This game isn't supported, Sorry!",
-    Duration = 15,
-  })
-end
+local a={WasFound=false}for b=1,#Games do if game.PlaceId==Games[b].ID then a.WasFound=true;loadstring(game:HttpGet("https://raw.githubusercontent.com/bonefraktur/Bone_Hub/main/Game_Scripts/"..Games[b].Script))()end end;warn(a.WasFound)if not a.WasFound then game:GetService("StarterGui"):SetCore("SendNotification",{Title="BONE HUB",Text="This game isn't supported, Sorry!",Duration=15})end
