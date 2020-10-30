@@ -1,0 +1,9 @@
+local Games = {
+ { ID = 1844663089, Script = "Test" }
+}
+
+for i = 1,#Games do
+  if game.PlaceId == ID then
+    loadstring(game:HttpGet("
+  end
+end
