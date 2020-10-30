@@ -3,7 +3,7 @@ local Games = {
 }
 
 for i = 1,#Games do
-  if game.PlaceId == ID then
-    loadstring(game:HttpGet("
+  if game.PlaceId == Games[i].ID then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bonefraktur/Bone_Hub/main/Game_Scripts/" .. Games[i].Script))()
   end
 end
