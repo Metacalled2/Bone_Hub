@@ -4,6 +4,8 @@ local Games = {
 
 local StatusIndicator = { WasFound = false }
 
+
+
 for i = 1,#Games do
   if game.PlaceId == Games[i].ID then
     StatusIndicator.WasFound = true
@@ -11,6 +13,7 @@ for i = 1,#Games do
   end
 end
 
+warn(StatusIndicator.WasFound)
 if not StatusIndicator.WasFound then
   game:GetService("StarterGui"):SetCore("SendNotification",{
     Title = "BONE HUB",
